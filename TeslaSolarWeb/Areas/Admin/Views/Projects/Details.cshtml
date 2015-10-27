@@ -1,0 +1,58 @@
+﻿@model TeslaSolarWeb.Models.Project
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="row">
+    <div class="col-sm-6 col-sm-offset-3 text-center" style="background-color: white; border: 1px solid silver; padding: 10px;">
+        <div class="page-header" style="margin-top: 0px !important;">
+            <h4><span class="glyphicon glyphicon-chevron-right"></span>Project <small>- preview project details.</small></h4>
+        </div>
+
+
+        <h4>Project details</h4>
+        <hr/>
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.Caption)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Caption)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Description)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Description)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.ImageUrl)
+            </dt>
+
+            <dd>
+                    <a href="@Url.Content(@Model.ImageUrl)" class="thumbnail pregledProekti col-xs-offset-3">
+                        <img src="@Url.Content(@Model.ImageUrlSmall)" alt="SolarProjectPicture">
+                    </a>
+            </dd>
+
+        </dl>
+        <div class="row">
+            <div class="col-xs-6 col-xs-offset-3 text-center">
+                @Html.ActionLink("Edit", "Edit", new {id = Model.Id}, new {@class = "btn-warning btn-lg"})
+            </div>
+            <br/>
+            <br />
+            <div class="col-xs-12 text-left">
+                <i> @Html.ActionLink("Back to projects List", "Index", "", new {@class = "btn-info btn-sm"})</i>
+            </div>
+
+        </div>
+    </div>
+</div>
+
