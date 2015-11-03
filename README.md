@@ -11,7 +11,7 @@ Notable features:
 - Admin panel
 - Picture resizing
 - Email form
-- 
+
 ![Preview](https://github.com/markomitr/Asp.Net-MVC-EntityFramwork-WebApp/blob/master/Media/TeslaSolar_AdminPage.PNG)
 
 www.teslasolarsolutions.com
